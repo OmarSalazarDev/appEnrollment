@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoursesService } from './services/courses.service';
+import { CourseListComponent } from './components/course-list/course-list.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CourseListComponent
+  ],
   imports: [
     CommonModule
   ],

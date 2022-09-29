@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { InscriptionsModule } from '../inscriptions.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: InscriptionsModule
 })
 export class InscriptionsService {
 
