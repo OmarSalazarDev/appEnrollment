@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { InscriptionsModule } from '../inscriptions.module';
 
 @Injectable({
-  providedIn: InscriptionsModule
+  providedIn: 'root'
 })
 export class InscriptionsService {
 

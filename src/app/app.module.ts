@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { InscriptionsModule } from './inscriptions/inscriptions.module';
-
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { InscriptionsModule } from './inscriptions/inscriptions.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
+    SharedModule,
     CoursesModule,
     InscriptionsModule,
     StudentsModule
