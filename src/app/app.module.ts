@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { InscriptionsModule } from './inscriptions/inscriptions.module';
@@ -21,6 +22,7 @@ import { InscriptionsModule } from './inscriptions/inscriptions.module';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    AuthModule,
     CoursesModule,
     InscriptionsModule,
     StudentsModule
