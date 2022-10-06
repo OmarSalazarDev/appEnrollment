@@ -2,6 +2,14 @@
   margin-right: -50px;
 }
 
+button {
+  background-color: var(--primary-color) !important;
+}
+
+button:hover {
+  background-color: var(--secondary-hover) !important;
+}
+
 @media (max-width: 991.98px) {
   .cascading-right {
     margin-right: 0;

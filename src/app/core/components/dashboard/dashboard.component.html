@@ -12,10 +12,11 @@
             </button>
           </li>
           <li class="mb-1">
-            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" routerLink="/courses/list/" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" (click)="navigationRoute('courses/list');">
               CURSO
             </button>
           </li>
+          <!-- <li><a class="btn btn-primary" routerLink="/courses/list">cursos</a></li> -->
           <li class="mb-1">
             <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
               INSCRIPCION
@@ -25,19 +26,8 @@
       </div>
     </div>
     <div class="col-md-9 px-3">
-      <h4>Lista Cursos</h4>
-      <div *ngFor="let course of courses$ | async">
-        <mat-card>
-          <mat-card-title>{{ course.id }} - {{ course.nameCourses }}</mat-card-title>
-          <mat-card-subtitle>Impartido por {{ course.teacher }} del {{ course.startDate | date: 'dd/MM/yyyy' }} al {{ course.endDate | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
-          <mat-card-actions align="end">
-            <button mat-flat-button color="primary" (click)="openDialog(course)">Editar</button>
-            <button mat-flat-button color="warn" (click)="delete(course.id)">Eliminar</button>
-          </mat-card-actions>
-        </mat-card>
-        <br>
-      </div>
+      <!-- <router-outlet></router-outlet> -->
+      <h1>hola</h1>
     </div>
   </div>
 </div>
-
