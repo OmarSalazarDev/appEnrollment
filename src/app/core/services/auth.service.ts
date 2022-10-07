@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, map, Subject } from 'rxjs';
 import { Session } from 'src/app/models/session';
 import { User } from 'src/app/models/user';
-// Verificado
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   sessionSubject!: BehaviorSubject<Session>
+  private api: string = environment.api;
 
-  constructor() {
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) {
     const session: Session = {
       activeSession: false
     }
@@ -17,16 +24,29 @@ export class AuthService {
   }
 
   logIn(user: User) {
-    const session: Session = {
-      activeSession: true,
-      user: {
-        id: user.id,
-        username: user.username,
-        psw: user.psw,
-        admin: user.admin
+    this.http.get<User[]>(`${this.api}/user`).pipe(
+      map((users: User[]) => {
+        return users.filter((u: User) => u.username === user.username && u.psw === user.psw)[0];
+      })
+    ).subscribe((user: User) => {
+      if(user) {
+        const session: Session = {
+          activeSession: true,
+          user: {
+            id: user.id,
+            username: user.username,
+            psw: user.psw,
+            admin: user.admin
+          }
+        }
+        this.sessionSubject.next(session);
+        this.router.navigate(['dashboard']);
+      }else {
+        alert('Usuario no encontrado.');
       }
-    }
-    this.sessionSubject.next(session);
+    });
+
+
   }
 
   SignOff() {
