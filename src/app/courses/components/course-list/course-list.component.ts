@@ -39,6 +39,12 @@ export class CourseListComponent implements OnInit {
     const dialogRef = this.dialog.open(EditDialogComponent, {
       width: '300px',
       data: course
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if(result) {
+        alert(`${course.id} - ${course.nameCourses} fue editado satisfactoriamente.`);
+        this.ngOnInit();
+      }
     })
   }
 

@@ -1,1 +1,31 @@
-<p>edit-dialog works!</p>
+<h1 mat-dialog-title>Editar curso</h1>
+<div mat-dialog-content>
+  <form [formGroup]="fb" (ngSubmit)="editCourse()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" formControlName="nameCourses">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Inicio</mat-label>
+      <input matInput [matDatepicker]="startDate" formControlName="startDate">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+      <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Fin</mat-label>
+      <input matInput [matDatepicker]="endDate" formControlName="endDate">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+      <mat-datepicker #endDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Profesor</mat-label>
+      <input matInput type="text" formControlName="teacher">
+    </mat-form-field><br>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="closeDialog()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="editCourse()">Editar</button>
+</div>

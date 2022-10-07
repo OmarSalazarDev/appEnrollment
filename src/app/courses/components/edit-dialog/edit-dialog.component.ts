@@ -28,4 +28,21 @@ export class EditDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeDialog() {
+    this.dialogRef.close();
+  }
+
+  editCourse() {
+    const c: Course = {
+      id: this.course.id,
+      nameCourses: this.fb.value.nameCourses,
+      startDate: this.fb.value.startDate,
+      endDate: this.fb.value.endDate,
+      teacher: this.fb.value.teacher
+    }
+    this.courseService.editCourse(c).subscribe((course: Course) => {
+      this.dialogRef.close(course);
+    })
+  }
+
 }
