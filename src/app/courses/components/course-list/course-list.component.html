@@ -26,10 +26,21 @@
     </div>
     <div class="col-md-9 px-3">
       <h4>Lista Cursos</h4>
+      <div class="row">
+        <div class="col-6">
+          <mat-card>
+            <mat-card-title>NUEVO CURSO</mat-card-title>
+            <mat-card-actions align="end">
+              <button mat-flat-button color="primary" (click)="navigationRoute('courses/new')">Agregar</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
       <div *ngFor="let course of courses$ | async">
         <mat-card>
           <mat-card-title>{{ course.id }} - {{ course.nameCourses }}</mat-card-title>
-          <mat-card-subtitle>Impartido por {{ course.teacher }} del {{ course.startDate | date: 'dd/MM/yyyy' }} al {{ course.endDate | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
+          <mat-card-subtitle>Impartido por {{ course.teacher }} del {{ course.startDate | date: 'dd/MM/yyyy' }} al {{ course.endDate | date: 'dd/MM/yyyy' }}
+          </mat-card-subtitle>
           <mat-card-actions align="end">
             <button mat-flat-button color="primary" (click)="openDialog(course)">Editar</button>
             <button mat-flat-button color="warn" (click)="delete(course.id)">Eliminar</button>

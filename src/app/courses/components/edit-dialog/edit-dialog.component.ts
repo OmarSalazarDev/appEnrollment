@@ -22,7 +22,7 @@ export class EditDialogComponent implements OnInit {
       startDate: new FormControl(course.startDate),
       endDate: new FormControl(course.endDate),
       teacher: new FormControl(course.teacher),
-    })
+    });
   }
 
   ngOnInit(): void {

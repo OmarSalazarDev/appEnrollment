@@ -6,11 +6,13 @@ import { CourseListComponent } from './components/course-list/course-list.compon
 import { SharedModule } from '../shared/shared.module';
 import { CoursesRoutingModule } from './courses-routing.module';
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
+import { NewDialogComponent } from './components/new-dialog/new-dialog.component';
 
 @NgModule({
   declarations: [
     CourseListComponent,
-    EditDialogComponent
+    EditDialogComponent,
+    NewDialogComponent
   ],
   imports: [
     CommonModule,
