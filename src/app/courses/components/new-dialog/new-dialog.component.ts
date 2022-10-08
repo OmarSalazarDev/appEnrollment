@@ -41,5 +41,4 @@ export class NewDialogComponent implements OnInit {
       this.router.navigate(['courses/list']);
     });
   }
-
 }

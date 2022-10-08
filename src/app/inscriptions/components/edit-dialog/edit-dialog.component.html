@@ -1,1 +1,17 @@
-<p>edit-dialog works!</p>
+<h1 mat-dialog-title>Editar curso</h1>
+<div mat-dialog-content>
+  <form [formGroup]="fb" (ngSubmit)="editInscription()">
+    <mat-form-field appearance="fill">
+      <mat-label>Curso</mat-label>
+      <input matInput type="text" formControlName="nameCourses">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field><br>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="closeDialog()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="editInscription()">Editar</button>
+</div>

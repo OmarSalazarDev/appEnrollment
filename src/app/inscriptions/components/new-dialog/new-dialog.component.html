@@ -1,1 +1,16 @@
-<p>new-dialog works!</p>
+<h1 mat-dialog-title>Nueva inscripción</h1>
+<div mat-dialog-content>
+  <form [formGroup]="fb" (ngSubmit)="addInscription()">
+    <mat-form-field appearance="fill">
+      <mat-label>Curso</mat-label>
+      <input matInput type="text" formControlName="nameCourses">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field><br>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-flat-button color="primary" (click)="addInscription()">Editar</button>
+</div>
