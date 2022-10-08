@@ -43,3 +43,16 @@
   border-color: var(--secondary-color);
   transition: 3ms;
 }
+
+/*--------------------------------------------------------------
+# NAVBAR
+--------------------------------------------------------------*/
+.btnprimary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btnsecondary {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}

@@ -42,8 +42,8 @@
           <mat-card-subtitle>Impartido por {{ course.teacher }} del {{ course.startDate | date: 'dd/MM/yyyy' }} al {{ course.endDate | date: 'dd/MM/yyyy' }}
           </mat-card-subtitle>
           <mat-card-actions align="end">
-            <button mat-flat-button color="primary" (click)="openDialog(course)">Editar</button>
-            <button mat-flat-button color="warn" (click)="delete(course.id)">Eliminar</button>
+            <button mat-flat-button class="btnprimary" (click)="openDialog(course)">Editar</button>
+            <button mat-flat-button class="btnsecondary" (click)="delete(course.id)">Eliminar</button>
           </mat-card-actions>
         </mat-card>
         <br>

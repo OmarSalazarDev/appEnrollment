@@ -30,7 +30,7 @@ export class CourseListComponent implements OnInit {
 
   delete(id: string) {
     this.coursesService.deleteCourse(id).subscribe((course) => {
-      alert(`$(course.id) - $(nameCourses) eliminado satisfactoriamente`);
+      alert(`${course.id} - ${course.nameCourses} eliminado satisfactoriamente.`);
       this.ngOnInit();
     });
   }
@@ -45,7 +45,6 @@ export class CourseListComponent implements OnInit {
         alert(`${course.id} - ${course.nameCourses} fue editado satisfactoriamente.`);
         this.ngOnInit();
       }
-    })
+    });
   }
-
 }
