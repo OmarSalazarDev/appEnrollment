@@ -1,5 +1,19 @@
-.cascading-right {
-  margin-right: -50px;
+.bg-login {
+  height: 81%;
+}
+
+.cascading-center {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 70vh;
+}
+
+img {
+  width: 80%;
+}
+
+mat-form-field {
+  width: 80%;
 }
 
 button {
@@ -8,10 +22,15 @@ button {
 
 button:hover {
   background-color: var(--secondary-hover) !important;
+  border-color: var(--secondary-hover);
 }
 
 @media (max-width: 991.98px) {
   .cascading-right {
     margin-right: 0;
+  }
+
+  img {
+    width: 0%;
   }
 }

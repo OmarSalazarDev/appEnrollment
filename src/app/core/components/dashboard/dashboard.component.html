@@ -7,17 +7,17 @@
         </a>
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
-            <button class="btn btn-to align-items-center active  collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" [routerLink]="['/students/list']">
               ESTUDIANTE
             </button>
           </li>
           <li class="mb-1">
-            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" (click)="navigationRoute('courses/list');">
+            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" [routerLink]="['/courses/list']">
               CURSO
             </button>
           </li>
           <li class="mb-1">
-            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+            <button class="btn btn-to align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true" [routerLink]="['/inscriptions/list']">
               INSCRIPCION
             </button>
           </li>

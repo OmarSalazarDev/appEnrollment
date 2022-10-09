@@ -6,6 +6,7 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { SharedModule } from '../shared/shared.module';
 import { NewDialogComponent } from './components/new-dialog/new-dialog.component';
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
+import { StudentsRoutingModule } from './students-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
   ],
   imports: [
     CommonModule,
+    StudentsRoutingModule,
     SharedModule
   ],
   providers: [

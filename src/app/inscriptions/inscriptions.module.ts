@@ -6,6 +6,7 @@ import { InscriptionListComponent } from './components/inscription-list/inscript
 import { SharedModule } from '../shared/shared.module';
 import { NewDialogComponent } from './components/new-dialog/new-dialog.component';
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
+import { InscriptionsRoutingModule } from './inscriptions-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
   ],
   imports: [
     CommonModule,
+    InscriptionsRoutingModule,
     SharedModule
   ],
   providers: [
